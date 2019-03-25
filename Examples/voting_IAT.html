@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Are you ald enough to VOTE?</title>
+<!--link href="greg.css" rel="stylesheet" type="text/css" /-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript">
+	
+	var userAge;
+	var ageLimit = 18;
+	
+	function checkAge()
+	{
+		var getAge;
+		
+		getAge = prompt("Enter age: ");
+		userAge = parseInt(getAge);
+		
+		if (userAge >= ageLimit){
+			alert("You can vote");
+			/*var result = document.getElementById("output") = "You can vote.";*/
+			/*document.write(result);*/
+		}
+		else {
+			alert("You are too young to vote");
+		}
+		
+		
+	}
+	
+	
+	
+	</script>
+</head>
+<body>
+<div id="container">
+
+	<button onclick="checkAge()">CHECK AGE</button>
+	<p id="output"> </p>
+ 
+</div>
+</body>
+</html>

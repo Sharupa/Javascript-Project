@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Drop down menu for color</title>
+        <script type="text/javascript">
+
+            function changeColor() {
+                var selColor = document.getElementById("selColor");
+                var color = selColor.value;
+                document.body.style.backgroundColor = color;
+            }
+
+            function changeColorOfText() {
+                var selColorOfText = document.getElementById("selColorOfText");
+                var color = selColorOfText.value;
+                document.getElementById("textColor").style.color = color;
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <form action="">
+            <h1>Please select a color</h1>
+            <fieldset>
+                <select id="selColor">
+                    <option value="#FFFFFF">White</option>
+                    <option value="#FF0000">Red</option>
+                    <option value="#FFCC00">Orange</option>
+                    <option value="#FFFF00">Yellow</option>
+                    <option value="#00FF00">Green</option>
+                    <option value="#0000FF">Blue</option>
+                    <option value="#663366">Indigo</option>
+                    <option value="#FF00FF">Violet</option>
+                </select>
+                <input type="button" value="Change Color" onclick="changeColor()" />
+            </fieldset>
+
+            <fieldset>
+                <select id="selColorOfText">
+                    <option value="#FFFFFF">White</option>
+                    <option value="#FF0000">Red</option>
+                    <option value="#FFCC00">Orange</option>
+                    <option value="#FFFF00">Yellow</option>
+                    <option value="#00FF00">Green</option>
+                    <option value="#0000FF">Blue</option>
+                    <option value="#663366">Indigo</option>
+                    <option value="#FF00FF">Violet</option>
+                </select>
+                <input type="button" value="Change Color" onclick="changeColorOfText()" />
+            </fieldset>
+
+            <h1 id="textColor">Color of text Color of text Color of text Color of text Color of text Color of text Color of text Color of text Color of text </h1>
+
+        </form>
+
+    </body>
+
+    </html>

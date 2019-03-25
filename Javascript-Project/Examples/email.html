@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>JavaScript Math Random</title>
+<!--link href="greg.css" rel="stylesheet" type="text/css" /-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript">
+	
+	function getEmail(){
+		var atSign = "@";
+		email = prompt("Enter your email address ", " ");
+		numChars = email.length;
+		okSign = 1;
+		for( j = 1; j < numChars; j++){
+			if (email.charAt(j) == atSign){
+				okSign = 0;
+			}
+		}
+		if (okSign == 0){
+			if(email.charAt(numChars - 4) != "."){
+				document.getElementById("message").innerHTML = "<h3>You entered " + email + ". This is not a valid email address.</h3>"
+			}
+			else{
+				document.getElementById("message").innerHTML = "<h3>You entered " + email + ". This is a valid email address.</h3>"
+			}
+		}
+		else{
+			document.getElementById("message").innerHTML = "<h3>You entered " + email + ". This is a valid email address.</h3>"
+		}
+	}
+	
+	
+	</script>
+</head>
+<body>
+<div id="container">
+	
+	
+	
+	<table align="center" width = "70%"><tr><td colspan = "2">
+	<p><input type ="button" id="email" value="Begin now" onclick="getEmail()" /></p>
+	</td></tr>
+	
+	<tr><td id="message">&nbsp</td></tr>
+	</table>
+	
+	
+	<br><br>
+	<p id="message"></p>
+	
+</div>
+</body>
+</html>
